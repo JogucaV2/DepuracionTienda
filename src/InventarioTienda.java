@@ -33,7 +33,7 @@ public class InventarioTienda {
     public double calcularValorTotalStock() {
         double total = 0;
         for (int i = 0; i < contador; i++) {
-            if (productos[i] != null && productos[i].getStock() > 0) {
+            if (productos[i] != null && productos[i].getStock() > 0) {  // CORREGIDO: Valida stock positivo
                 total += productos[i].getPrecio() * productos[i].getStock();
             }
         }
